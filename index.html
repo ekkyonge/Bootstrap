@@ -17,7 +17,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <title>Day 3</title>
+    <title>Continue</title>
   </head>
 
   <!-- Navbar -->
@@ -76,69 +76,61 @@
       GET IN TOUCH
     </h4>
 
-    <form style="margin: 20px 400px; font-weight: 500; color: black">
+    <form
+      class="container mt-4"
+      style="max-width: 600px; font-weight: 500; color: black"
+    >
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label" style="margin: 0"
-          >Name</label
-        >
+        <label for="name" class="form-label">Name</label>
         <input
           type="text"
           class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-          style="width: 100%; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)"
+          id="name"
+          style="box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)"
         />
       </div>
+
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label" style="margin: 0"
-          >Email</label
-        >
+        <label for="email" class="form-label">Email</label>
         <input
           type="email"
           class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-          style="width: 100%; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)"
+          id="email"
+          style="box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)"
         />
       </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label" style="margin: 0"
-          >Phone Number</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="exampleInputPassword1"
-          style="width: 100%; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="disabledSelect" class="form-label" style="margin: 0"
-          >Subject</label
-        >
 
-        <select
-          id="disabledSelect"
-          class="form-select"
-          style="width: 100%; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)"
-        ></select>
-      </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label" style="margin: 0"
-          >Your Message</label
-        >
+        <label for="phone" class="form-label">Phone Number</label>
         <input
           type="text"
           class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-          style="
-            width: 100%;
-            padding-bottom: 70px;
-            border-radius: 4px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-          "
+          id="phone"
+          style="box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)"
         />
+      </div>
+
+      <div class="mb-3">
+        <label for="subject" class="form-label">Subject</label>
+        <select
+          id="subject"
+          class="form-select"
+          style="box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)"
+        >
+          <option selected disabled>Select Subject</option>
+          <option value="1">Tugas week 1</option>
+          <option value="2">Tugas week 2</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="form-label">Your Message</label>
+        <textarea
+          class="form-control"
+          id="message"
+          rows="4"
+          style="box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)"
+        ></textarea>
       </div>
 
       <button
@@ -153,14 +145,12 @@
           float: right;
           margin-top: 20px;
         "
+        onclick="inputData()"
       >
         submit
       </button>
     </form>
 
-    <script>
-      feather.replace();
-    </script>
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
